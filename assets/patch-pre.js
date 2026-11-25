@@ -48,3 +48,20 @@
     L.tileLayer = wrap;
   }catch(e){}
 })();
+/* 대기배출사업장 마커: 농도(원형)와 구분되도록 공장 아이콘 사각형으로 표출 */
+(function(){
+  'use strict';
+  var cache = {};
+  var SVG = '<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">'
+          + '<path fill="#fff" d="M1 15V8l4 2.5V8l4 2.5V8l4 2.5V2h2v13z"/></svg>';
+  window.facIcon = function(color){
+    if (!cache[color]){
+      cache[color] = L.divIcon({
+        className: 'fac-ic',
+        html: '<div class="fac-ic-box" style="background:'+color+'">'+SVG+'</div>',
+        iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -10]
+      });
+    }
+    return cache[color];
+  };
+})();

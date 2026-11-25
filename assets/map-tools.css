@@ -15,3 +15,12 @@
 #mapPanel .hint{margin-top:5px; font-size:10px; color:#8a97a6; line-height:1.4;}
 #measInfo{display:none; margin-top:5px; font-size:11px; color:#d64541; font-weight:700;}
 .leaflet-container .mapCoord{background:rgba(255,255,255,.85); padding:2px 6px; font-size:11px; color:#41505f;}
+
+/* 대기배출사업장 마커 (공장 아이콘 사각형) */
+.fac-ic{background:none;border:none;}
+.fac-ic-box{width:20px;height:20px;box-sizing:border-box;border:2px solid #1b1b1b;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.45);cursor:pointer;}
+.fac-ic-box:hover{transform:scale(1.2);}
+.fac-legend{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:6px;font-size:11px;align-items:center;}
+.fac-legend span{display:inline-flex;align-items:center;gap:4px;}
+.fac-legend i{display:inline-block;width:12px;height:12px;border:2px solid #1b1b1b;border-radius:3px;box-sizing:border-box;}

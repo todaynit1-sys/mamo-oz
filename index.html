@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수도권대기환경청 오존 핫스팟 진단기 v16.5</title>
+<title>오존 핫스팟 진단기 v16.5</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="assets/map-tools.css">
 <style>
@@ -123,10 +123,9 @@ footer{flex:0 0 auto; font-size:10.5px; color:var(--sub); padding:5px 14px; back
 <div id="loginScreen">
   <div class="glass" id="glassBox">
     <h1>오존 핫스팟 진단기</h1>
-    <p>수도권대기환경청 AI 기반 대기오염물질 분석시스템<br>접속 코드를 입력하세요</p>
+    <p>AI 기반 대기오염물질 분석시스템<br>접속 코드를 입력하세요</p>
     <input id="codeInput" type="password" maxlength="8" placeholder="****">
     <button onclick="tryLogin()">접속</button>
-    <div class="foot">제작: 신현준 연구사 (hjuni@korea.kr)</div>
   </div>
 </div>
 
@@ -427,6 +426,7 @@ footer{flex:0 0 auto; font-size:10.5px; color:var(--sub); padding:5px 14px; back
         <button onclick="doFacSearch()" style="padding:5px 9px;font-size:12px;border:1px solid var(--line);background:#fff;border-radius:6px;cursor:pointer;">검색</button>
         <input type="text" id="facSearchInput" placeholder="🔎 사업장명·주소 검색" style="flex:1;padding:5px 7px;border:1px solid var(--line);border-radius:6px;font-size:12px;">
       </div>
+      <div class="fac-legend">사업장 마커(■):<span><i style="background:#7b1fa2"></i>1종</span><span><i style="background:#c0392b"></i>2종</span><span><i style="background:#e67e22"></i>3종</span><span><i style="background:#f1c40f"></i>4종</span><span><i style="background:#95a5a6"></i>5종·기타</span></div>
       <div class="small" id="facMsg">표출을 켜면 현재 지도 화면 범위 안의 사업장만 표시됩니다 (이동·확대 시 갱신, 최대 600곳). 출처: 환경부 대기오염물질 배출시설 설치사업장.</div>
     </div>
 
@@ -441,7 +441,6 @@ footer{flex:0 0 auto; font-size:10.5px; color:var(--sub); padding:5px 14px; back
   <div id="map"></div>
 </main>
 
-<footer>수도권대기환경청 오존 핫스팟 진단기 v16.5 · 간이 스크리닝 도구 · 제작: 신현준 연구사 (hjuni@korea.kr)</footer>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
